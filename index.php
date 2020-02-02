@@ -12,6 +12,7 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
     echo validateCredentials($username, $password, $username1, $password1);
 };
 
+//username1 and password1 are from the database normally but here they have been hard-coded
 
 
 
@@ -19,11 +20,19 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
 
 
 //set the session variables for username and password
-//$_SESSION['username']=$username;
-//$_SESSION['password']=$password;
-//
-//
-//var_dump($_SESSION);
+$_SESSION['username']= $username1;
+$_SESSION['password']= $password1;
+
+if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
+//    $sessionUser = $username1;
+//    $sessionPass = $password1;
+    echo 'Welcome back ' . $username1;
+} else {
+    echo 'You are not logged in.';
+}
+
+
+var_dump($_SESSION);
 
 
 

@@ -11,7 +11,7 @@ function validateCredentials (string $usernameFromUser, string $passwordFromUser
 
 
 
-//passsword hashing
+//password hashing
 //function cleanseInput(string $userInput) :string {
 //    $cleansedInput = trim($userInput);
 //    $cleansedInput = stripslashes($userInput);
